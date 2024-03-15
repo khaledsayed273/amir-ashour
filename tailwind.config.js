@@ -14,6 +14,27 @@ module.exports = {
         "sectionColorLg": "rgba(5, 5, 3, 1)"
       }
     },
+    fontSize: {
+      sm: '14px',
+      base: '16px',
+      xl: '24px',
+      '2xl': '28px',
+      '3xl': '36px',
+      '4xl': '80px',
+    },
+    fontWeight: {
+      thin: '100',
+      hairline: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      'extra-bold': '800',
+      black: '900',
+    }
   },
   plugins: [],
 };

@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
+import style from "./Navbar.module.css"
 
 function Navbar() {
 
@@ -38,10 +39,10 @@ function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className='bg-black sticky top-0 z-50 '>
-      <div className="container z-50 bg-black py-5 mx-auto flex justify-between items-center flex-wrap px-4">
+    <nav  className='bgColor relative w-full top-0 z-50 '>
+      <div className="container bgColor  z-50  py-5 mx-auto flex justify-between items-center flex-wrap px-4">
 
-        <Link className='flex items-center' href="/">
+        <Link className='flex items-center' aria-label="logo" href="/">
           <svg width="80" height="57" viewBox="0 0 108 57" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M47.9371 28.8343C47.8 28.5143 47.64 28.2172 47.4571 27.9429C39.2285 30.1143 30.9085 31.5543 22.6571 33.2457C23.7771 33.4057 24.8514 33.5657 25.9714 33.4057C27.6628 33.1543 29.3085 32.72 31 32.56C31.8685 32.4914 32.7142 32.3314 33.5828 32.1257C35.0457 31.76 36.5085 31.2572 38.0628 31.7143C38.3371 31.7829 38.7028 31.8743 38.9542 31.6C38.9771 31.3029 38.5657 31.4172 38.5657 31.0514C40.9885 30.48 43.4342 29.84 45.9714 29.7257C46.7028 29.7029 47.4342 29.7714 48.1428 29.52C48.0971 29.2914 48.0285 29.0629 47.9371 28.8343Z" fill="white" />
             <path d="M54.2228 37.2228C53.3085 34.5942 53.3542 31.7142 52.0057 29.1999C51.8685 28.9713 50.8171 26.2971 50.7485 26.1599C50.04 24.5599 49.3542 22.9599 48.76 21.3142C48.6685 21.0856 48.6228 20.8342 48.4857 20.6285C48.2114 20.1713 47.8457 20.0799 47.4571 20.4456C46.6571 21.1999 45.9714 21.9771 46.3371 23.2342C46.5657 24.0799 46.7714 24.9028 47.16 25.7028C47.5028 26.4113 49.4457 29.9542 49.4914 30.0456C49.8114 30.8685 49.9257 31.7142 50.1085 32.5599C50.2685 33.3828 51.32 33.7713 51.5485 34.6628C51.5714 34.7542 51.5714 34.8228 51.6171 34.8913C52.1428 35.7828 52.28 36.8571 52.8742 37.7256C53.1257 38.0913 53.4 38.3885 53.9028 38.1599C54.3371 37.9771 54.36 37.6113 54.2228 37.2228Z" fill="white" />
@@ -66,8 +67,8 @@ function Navbar() {
 
         </Link>
 
-        <div className={` md:bg-none md:w-auto justify-center absolute md:static left-0 w-full -z-10 md:z-0 transition-all duration-500  ${open ? "flex mt-12 md:mt-0 top-7" : "flex -top-80 md:opacity-100"}`}>
-          <ul className='block bg-black z-50 w-full md:flex'>
+        <div className={`${style.ulNavbar} bgColor md:bg-transparent md:w-auto justify-center absolute md:static left-0 w-full -z-10 md:z-0 transition-all duration-500  ${open ? "flex mt-12 md:mt-0 top-7" : "flex -top-96 md:opacity-100"}`}>
+          <ul className='block  z-50 w-full md:flex'>
             {ul.map((item) => (
               <li className={`md:mx-5 my-8 text-center md:my-0 text-base lg:text-lg uppercase  hover:text-grayColor ${pathName === item.path ? "text-grayColor" : "text-white"} transition-all font-semibold`} key={item.id}>
                 <Link href={item.path}>

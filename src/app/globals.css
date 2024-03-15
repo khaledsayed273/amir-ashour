@@ -3,3 +3,11 @@
 @tailwind utilities;
 
 
+.bgColor{
+    /* background-color: #101014d9; */
+    background-color: #101014;
+}
+
+body{
+    background-color: rgb(16 15 20);
+}

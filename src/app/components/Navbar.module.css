@@ -1,0 +1,12 @@
+@media (max-width: 767px) {
+    .ulNavbar {
+        margin-top: 69px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .ulNavbar {
+        margin-top: 0;
+    }
+
+}
