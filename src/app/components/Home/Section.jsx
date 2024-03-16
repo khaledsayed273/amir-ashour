@@ -3,7 +3,7 @@ import React from 'react'
 
 function Section() {
     return (
-        <section  className='relative  transition-all duration-700  text-white py-2 px-1 md:p-5'>
+        <section  className='relative text-white py-2 px-1 md:p-5'>
             <div className='text-base block font-semibold  md:hidden mb-7 text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleri
             </div>

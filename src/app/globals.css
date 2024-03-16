@@ -3,11 +3,101 @@
 @tailwind utilities;
 
 
-.bgColor{
+.bgColor {
     /* background-color: #101014d9; */
     background-color: #101014;
 }
 
-body{
+body {
     background-color: rgb(16 15 20);
+}
+
+
+/*SwiperHome */
+
+
+
+
+
+@media (max-width:1200px) {
+    .mySwiperHome {
+        height: 650px;
+    }
+    .mySwiperHome .swiper-wrapper{
+        height: 450px !important;
+    }
+
+    .mySwiperHome .swiper-slide {
+        width: 280px !important;
+        height: 449px !important;
+    }
+
+    .mySwiperHome .swiper-button-next,
+    .mySwiperHome .swiper-button-prev {
+        top: 300px !important;
+    }
+}
+
+@media (max-width:767px) {
+    
+    .mySwiperHome .swiper-button-next,
+    .mySwiperHome .swiper-button-prev {
+        top: 550px !important;
+    }
+}
+
+
+.mySwiperHome {
+    margin-top: 50px;
+    height: 800px;
+    user-select: none;
+}
+
+.mySwiperHome .swiper-wrapper {
+    margin-top: 30px;
+    height: 650px;
+}
+
+
+.mySwiperHome .swiper-slide {
+    width: 395px;
+    height: 649px;
+    border-radius: 20px !important;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+
+.mySwiperHome .swiper-button-next,
+.mySwiperHome .swiper-button-prev {
+    top: 400px ;
+    user-select: none;
+    color: white;
+
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 30px !important;
+}
+
+.mySwiperHome .swiper-button-next {
+    right: 10% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+}
+
+
+
+.mySwiperHome .swiper-button-prev {
+    left: 10% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+
+}
+
+.mySwiperHome .swiper-slide-active {
+    transform: scale(1) !important;
 }
