@@ -15,7 +15,7 @@ function Section() {
                 <h1 className='mt-4 font-medium text-2xl md:text-3xl xl:text-4xl'>THIS IS MY PORTFOLIO</h1>
             </div>
 
-            <div className="container mx-auto p-2 md:p-5">
+            <div className="container mx-auto p-2 mt-7 md:p-5">
                 <svg className='w-[120px] sm:w-[150px]  lg:w-[200px] md:my-5 xl:my-0' viewBox="0 0 322 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="104.5" cy="101.5" r="73.5" fill="url(#paint0_radial_122_389)" />
                     <circle cx="81.5" cy="81.5" r="80.5" stroke="#D69D66" strokeWidth="2" />
