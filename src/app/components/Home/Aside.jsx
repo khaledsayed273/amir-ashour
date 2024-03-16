@@ -29,17 +29,13 @@ function Aside() {
                 </svg>
 
 
-
-
-
-
                 <div className='mt-3.5 lg:mt-16'>
                     <div className='mt-10'>
                         <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-5 h-5 rounded-full'>
+                            <div className='bg-grayColor w-3 h-3 rounded-full'>
                             </div>
                             <div className='flex items-center'>
-                                <h1 className='text-sm  lg:text-3xl ms-2 font-bold md:font-semibold'>Visual Company</h1>
+                                <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Visual Company</h1>
                                 <h2 className='ms-5  md:mt-4 text-sm md:text-xl font-normal'>(2020 : current)</h2>
                             </div>
                         </div>
@@ -47,10 +43,10 @@ function Aside() {
                     </div>
                     <div className='mt-10'>
                         <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-5 h-5 rounded-full'>
+                            <div className='bg-grayColor w-3 h-3 rounded-full'>
                             </div>
                             <div className='flex items-center'>
-                                <h1 className='text-sm  lg:text-3xl ms-2 font-bold md:font-semibold'>Graphic Company </h1>
+                                <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Graphic Company </h1>
                                 <h2 className='ms-5 md:mt-4 text-sm md:text-xl font-normal'>(2020 : current)</h2>
                             </div>
                         </div>
@@ -58,10 +54,10 @@ function Aside() {
                     </div>
                     <div className='mt-10'>
                         <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-5 h-5 rounded-full'>
+                            <div className='bg-grayColor w-3 h-3 rounded-full'>
                             </div>
                             <div className='flex items-center'>
-                                <h1 className='text-sm  lg:text-3xl ms-2 font-bold md:font-semibold'>Design Company  </h1>
+                                <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Design Company  </h1>
                                 <h2 className='ms-5 md:mt-4 text-sm md:text-xl font-normal'>(2020 : 2021)</h2>
                             </div>
                         </div>
