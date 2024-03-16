@@ -21,15 +21,15 @@ body {
 
 @media (max-width:1200px) {
     .mySwiperHome {
-        height: 650px;
+        height: 600px !important;
     }
     .mySwiperHome .swiper-wrapper{
         height: 450px !important;
     }
 
     .mySwiperHome .swiper-slide {
-        width: 280px !important;
-        height: 449px !important;
+        width: 260px !important;
+        height: 420px !important;
     }
 
     .mySwiperHome .swiper-button-next,
