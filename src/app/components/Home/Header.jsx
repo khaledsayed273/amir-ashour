@@ -8,7 +8,7 @@ function Header() {
     return (
         <div className=' relative h-[400px] md:h-[500px] xl:h-[900px] px-5 flex '>
 
-            <Image priority style={{ objectFit: 'cover' }} src={amirPhoto} alt='background image' fill />
+            <Image priority style={{ objectFit: 'cover' }} sizes='(min-width:992px) , 100vw' src={amirPhoto} alt='background image' fill />
             <div className='my-auto sm:ms-10 md:ms-[50px] lg:ms-[110px] xl:ms-[120px] 2xl:ms-[200px]  md:w-[500px] z-40'>
                 <div className='xl:mb-32'>
                     <div className='text-white mt-10  uppercase inline-block'>
