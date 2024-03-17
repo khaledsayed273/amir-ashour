@@ -55,7 +55,7 @@ function FormComponent() {
                             <input id="comments" name="comments" type="checkbox" className="h-4 w-4 rounded border-gray-300  text-indigo-600 accent-amber-600 focus:ring-indigo-600" />
                             <label htmlFor="comments" className="font-medium ms-2 text-xs lg:text-sm select-none text-gray-900">I agree with terms of usage and privacy policy.</label>
                         </div>
-                        <button data-aos="fade-up" data-aos-duration="1000" onClick={HandleSend} className='capitalize mt-4 sm:mt-0  font-semibold bg-grayColor text-white hover:opacity-50 border-grayColor  px-8 py-1.5 rounded-full'>submit</button>
+                        <button data-aos="fade-up" data-aos-duration="1000" onClick={HandleSend} className='capitalize mt-4 sm:mt-0  font-semibold bg-amber-600 text-white hover:opacity-50 border-grayColor  px-8 py-1.5 rounded-full'>submit</button>
                     </div>
                 </form>
 
