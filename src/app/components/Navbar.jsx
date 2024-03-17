@@ -71,7 +71,7 @@ function Navbar() {
           <ul className='block  z-50 w-full md:flex'>
             {ul.map((item) => (
               <li className={`md:mx-5 my-8 text-center md:my-0 text-base lg:text-lg uppercase  hover:text-grayColor ${pathName === item.path ? "text-grayColor" : "text-white"} transition-all font-semibold`} key={item.id}>
-                <Link href={item.path}>
+                <Link onClick={() => setOpen(false)} href={item.path}>
                   {item.name}
                 </Link>
               </li>
