@@ -38,7 +38,7 @@ function page() {
                             <path d="M844.5 410.5C844.5 632.215 657.664 812.5 426.5 812.5C195.336 812.5 8.5 632.215 8.5 410.5C8.5 188.785 195.336 8.5 426.5 8.5C657.664 8.5 844.5 188.785 844.5 410.5Z" stroke="white" stroke-opacity="0.95" stroke-width="17" />
                         </svg>
 
-                        <Image sizes='(min-width:992px) , 100vw' style={{ width: "75%", height: "90%" }} className='m-auto absolute left-0 right-0  bottom-0' alt='amir-image-about' src={amirAbout} />
+                        <Image priority sizes='(min-width:992px) , 100vw' style={{ width: "75%", height: "90%" }} className='m-auto absolute left-0 right-0  bottom-0' alt='amir-image-about' src={amirAbout} />
                     </div>
                 </div>
                 <div className='flex justify-center items-center mt-16 lg:mt-0 md:relative'>
