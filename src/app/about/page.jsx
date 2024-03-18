@@ -36,7 +36,7 @@ function page() {
 
                     <div className="relative ms-auto w-full h-[400px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[600px] lg:w-[600px] lg:h-[600px] xl:w-[650px] xl:h-[650px]  2xl:w-[670px] 2xl:h-[670px]">
                         <svg className='absolute h-full w-full' viewBox="0 0 853 821" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M844.5 410.5C844.5 632.215 657.664 812.5 426.5 812.5C195.336 812.5 8.5 632.215 8.5 410.5C8.5 188.785 195.336 8.5 426.5 8.5C657.664 8.5 844.5 188.785 844.5 410.5Z" stroke="white" stroke-opacity="0.95" stroke-width="17" />
+                            <path d="M844.5 410.5C844.5 632.215 657.664 812.5 426.5 812.5C195.336 812.5 8.5 632.215 8.5 410.5C8.5 188.785 195.336 8.5 426.5 8.5C657.664 8.5 844.5 188.785 844.5 410.5Z" stroke="white" strokeOpacity="0.95" strokeWidth="17" />
                         </svg>
 
                         <Image priority sizes='100vw'  className='w-[75%] h-[90%] m-auto absolute left-0 right-0  bottom-0' alt='amir-image-about' src={amirAbout} />

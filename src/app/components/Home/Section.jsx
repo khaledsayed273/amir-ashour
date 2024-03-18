@@ -8,7 +8,7 @@ function Section() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleri
             </div>
             <div className='flex justify-center items-center '>
-                <Link className='bg-white flex justify-center items-center text-lg lg:text-2xl text-black static  lg:absolute lg:left-40 xl:left-60 2xl:left-64 -top-7 w-[140px]  lg:w-[268px] h-[40px] lg:h-[72px] rounded-full font-bold capitalize shadow-lg shadow-white/40 hover:opacity-75' href={"/contact"}>contact</Link>
+                <Link className='bg-white flex justify-center items-center text-lg lg:text-2xl text-black static mt-7   w-[140px]  lg:w-[268px] h-[40px] lg:h-[72px] rounded-full font-bold capitalize shadow-lg shadow-white/40 hover:opacity-75' href={"/contact"}>contact</Link>
             </div>
             <div className='flex flex-col justify-center items-center mt-8 lg:mt-20 text-xl sm:text-2xl md:text-4xl font-semibold'>
                 <h1 className='font-medium text-2xl md:text-3xl xl:text-4xl'>HEY THERE !</h1>
