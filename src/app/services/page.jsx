@@ -50,7 +50,7 @@ function page() {
                                 </div>
                                 <Image priority sizes='(max-width:992px),100vw' placeholder='blur' fill src={item.image} alt={item.title} />
                             </div>
-                            <h1 className='text-center mt-5 text-xl xl:text-4xl font-bold md:font-medium uppercase'>{item.title}</h1>
+                            <h1 className='text-center mt-5 text-xl xl:text-4xl font-bold md:font-medium uppercase'>{`${item.title}`}</h1>
 
                         </Link>
                     ))}
