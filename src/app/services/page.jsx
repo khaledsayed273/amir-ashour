@@ -48,7 +48,7 @@ function page() {
                             <div className='relative rounded-2xl overflow-hidden h-[300px] sm:h-[350px] lg:h-[450px]'>
                                 <div className='absolute w-full h-full left-0 top-0 z-40 bg-black/40'>
                                 </div>
-                                <Image priority sizes='(min-width:992px),100vw' placeholder='blur' fill src={item.image} alt={item.title} />
+                                <Image priority sizes='(max-width:992px),100vw' placeholder='blur' fill src={item.image} alt={item.title} />
                             </div>
                             <h1 className='text-center mt-5 text-xl xl:text-4xl font-bold md:font-medium uppercase'>{item.title}</h1>
 
