@@ -5,7 +5,6 @@ import img2 from "../../../../public/images/services/2.png"
 import img3 from "../../../../public/images/services/3.jpeg"
 import img4 from "../../../../public/images/services/4.png"
 import img5 from "../../../../public/images/services/5.jpeg"
-import img6 from "../../../../public/images/services/6.jpeg"
 import Link from 'next/link'
 import HeadService from './components/HeadService'
 
