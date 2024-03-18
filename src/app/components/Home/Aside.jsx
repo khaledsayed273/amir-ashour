@@ -3,7 +3,7 @@ import React from 'react'
 function Aside() {
     return (
         <aside>
-            <div className="container mx-auto p-3 md:p-5 text-white">
+            <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto p-3 md:p-5 text-white">
                 <svg className='w-[190px] sm:w-[250px]  lg:w-[320px] ' viewBox="0 0 542 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="104.5" cy="101.5" r="73.5" fill="url(#paint0_radial_122_393)" />
                     <circle cx="81.5" cy="81.5" r="80.5" stroke="#D69D66" strokeWidth="2" />
@@ -29,8 +29,8 @@ function Aside() {
                 </svg>
 
 
-                <div className='mt-3.5 lg:mt-16'>
-                    <div className='mt-10'>
+                <div data-aos="fade-up" data-aos-duration="1000" className='mt-3.5 lg:mt-16'>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
                         <div className='flex justify-start items-center my-7'>
                             <div className='bg-grayColor w-3 h-3 rounded-full'>
                             </div>
@@ -41,7 +41,7 @@ function Aside() {
                         </div>
                         <p className='text-sm md:text-xl font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.</p>
                     </div>
-                    <div className='mt-10'>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
                         <div className='flex justify-start items-center my-7'>
                             <div className='bg-grayColor w-3 h-3 rounded-full'>
                             </div>
@@ -52,7 +52,7 @@ function Aside() {
                         </div>
                         <p className='text-sm md:text-xl font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.</p>
                     </div>
-                    <div className='mt-10'>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
                         <div className='flex justify-start items-center my-7'>
                             <div className='bg-grayColor w-3 h-3 rounded-full'>
                             </div>

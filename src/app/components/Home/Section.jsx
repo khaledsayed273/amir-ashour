@@ -3,19 +3,19 @@ import React from 'react'
 
 function Section() {
     return (
-        <section  className='relative text-white py-2 px-1 md:p-5'>
-            <div className='text-base block font-semibold  md:hidden mb-7 text-center'>
+        <section data-aos="fade-up" data-aos-duration="1000" className='relative text-white py-2 px-1 md:p-5'>
+            <div data-aos="fade-up" data-aos-duration="1000" className='text-base block font-semibold  md:hidden mb-7 text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleri
             </div>
-            <div className='flex justify-center items-center '>
+            <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center items-center '>
                 <Link className='bg-white flex justify-center items-center text-lg lg:text-2xl text-black static mt-7   w-[140px]  lg:w-[268px] h-[40px] lg:h-[72px] rounded-full font-bold capitalize shadow-lg shadow-white/40 hover:opacity-75' href={"/contact"}>contact</Link>
             </div>
-            <div className='flex flex-col justify-center items-center mt-8 lg:mt-20 text-xl sm:text-2xl md:text-4xl font-semibold'>
+            <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col justify-center items-center mt-8 lg:mt-20 text-xl sm:text-2xl md:text-4xl font-semibold'>
                 <h1 className='font-medium text-2xl md:text-3xl xl:text-4xl'>HEY THERE !</h1>
                 <h1 className='mt-4 font-medium text-2xl md:text-3xl xl:text-4xl'>THIS IS MY PORTFOLIO</h1>
             </div>
 
-            <div className="container mx-auto p-2 mt-7 md:p-5">
+            <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto p-2 mt-7 md:p-5">
                 <svg className='w-[120px] sm:w-[150px]  lg:w-[200px] md:my-5 xl:my-0' viewBox="0 0 322 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="104.5" cy="101.5" r="73.5" fill="url(#paint0_radial_122_389)" />
                     <circle cx="81.5" cy="81.5" r="80.5" stroke="#D69D66" strokeWidth="2" />
@@ -29,7 +29,7 @@ function Section() {
                 </svg>
 
 
-                <div className='flex gap-2 sm:flex-row justify-between md:justify-around  '>
+                <div data-aos="fade-up" data-aos-duration="1000" className='flex gap-2 sm:flex-row justify-between md:justify-around  '>
                     <div >
                         <div className='flex justify-start items-center my-7'>
                             <div className='bg-grayColor w-3 h-3 rounded-full'>
@@ -74,10 +74,7 @@ function Section() {
                             <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Content create</h2>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
 
 

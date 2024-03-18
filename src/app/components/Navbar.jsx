@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 import style from "./Navbar.module.css"
 import Logo from './Logo'
+import dynamic from 'next/dynamic'
+const AosInit = dynamic(() => import('../shared/AosInt'), { ssr: true });
 
 function Navbar() {
 
@@ -40,7 +42,8 @@ function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className='bgColor relative w-full top-0 z-50 '>
+    <nav className='bgColor relative w-full top-0 z-50 select-none '>
+    {AosInit()}
       <div className="container bgColor  z-50  py-5 mx-auto flex justify-between items-center flex-wrap px-4">
 
         <Link onClick={() => setOpen(false)} className='flex items-center' aria-label="logo" href="/">
