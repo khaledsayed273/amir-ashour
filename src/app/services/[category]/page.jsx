@@ -69,7 +69,7 @@ function page({params : {category}}) {
                     {data?.map((item) => (
                         <Link className='hover:scale-90 transition-all duration-500' key={item.id} href={`/services/${category}/${item.id}`}>
                             <div className="relative w-full h-[300px] xl:h-[350px] overflow-hidden rounded-xl border border-orange-400">
-                                <Image priority sizes='(max-width:992px) , 100vw' src={item.image} fill alt={item.title} />
+                                <Image priority sizes='(max-width:992px) , 100vw' src={item.image} fill alt={`${item.title}`} />
                             </div>
                             <h1 className='mt-3 text-center capitalize text-xl lg:text-xl'>{item.title}</h1>
                         </Link>
