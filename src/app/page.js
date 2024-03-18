@@ -1,3 +1,4 @@
+import End from "./components/End";
 import Aside from "./components/Home/Aside";
 import Header from "./components/Home/Header";
 import Section from "./components/Home/Section";
@@ -10,6 +11,7 @@ export default function Home() {
       <Section />
       <Aside />
       <SwiperHome />
+      <End />
     </main>
   );
 }

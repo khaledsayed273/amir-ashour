@@ -17,8 +17,6 @@ body {
 
 
 
-
-
 @media (max-width:1200px) {
     .mySwiperHome {
         height: 600px !important;
@@ -98,6 +96,86 @@ body {
 
 }
 
-.mySwiperHome .swiper-slide-active {
-    transform: scale(1) !important;
+
+
+/*mySwiperServices */
+
+
+
+@media (max-width:1200px) {
+    .mySwiperServices {
+        height: 550px !important;
+    }
+    .mySwiperServices .swiper-wrapper{
+        height: 350px !important;
+    }
+
+    .mySwiperServices .swiper-slide {
+        width: 260px !important;
+        height: 350px !important;
+    }
+
+    .mySwiperServices .swiper-button-next,
+    .mySwiperServices .swiper-button-prev {
+        top: 450px !important;
+    }
+}
+
+@media (max-width:767px) {
+    .mySwiperServices .swiper-button-next,
+    .mySwiperServices .swiper-button-prev {
+        top: 450px !important;
+    }
+}
+
+
+.mySwiperServices {
+    margin-top: 50px;
+    height: 700px;
+    user-select: none;
+}
+
+.mySwiperServices .swiper-wrapper {
+    margin-top: 30px;
+    height: 550px;
+}
+
+
+.mySwiperServices .swiper-slide {
+    width: 350px;
+    height: 550px;
+    border-radius: 20px !important;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+
+.mySwiperServices .swiper-button-next,
+.mySwiperServices .swiper-button-prev {
+    top: 320px ;
+    user-select: none;
+    color: white;
+
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 30px !important;
+}
+
+.mySwiperServices .swiper-button-next {
+    right: 10% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+}
+
+
+
+.mySwiperServices .swiper-button-prev {
+    left: 10% !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+
 }

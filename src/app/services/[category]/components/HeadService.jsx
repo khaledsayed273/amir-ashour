@@ -22,9 +22,9 @@ function HeadService({ data }) {
 
     return (
         <>
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] my-8 xl:my-12 overflow-hidden rounded-xl border border-amber-500">
-                <Image className='transition-all duration-500 ' src={data[activeIndex].image} fill alt='image' />
-                <div className='absolute flex  left-0 top-0 bottom-0 right-0 bg-black/85'>
+            <div className="relative w-full h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] my-8 xl:my-12 overflow-hidden rounded-xl border border-amber-500">
+                <Image priority src={data[activeIndex].image} fill alt='image' />
+                <div className='absolute flex  left-0 top-0 bottom-0 right-0 bg-black/70'>
                     <div className='flex flex-col  justify-end p-5 xl:p-10'>
                         <div className='flex items-center mb-5'>
                             <span className='h-4 w-4 rounded-full bg-white me-2'></span>

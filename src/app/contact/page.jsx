@@ -3,6 +3,7 @@ import FormComponent from './components/FormComponent'
 import Image from 'next/image'
 import backgroundImage from "../../../public/images/backgroundImage.jpeg"
 import Link from 'next/link'
+import End from '../components/End'
 
 function page() {
     return (
@@ -100,7 +101,7 @@ function page() {
                 </div>
 
             </div>
-
+            <End/>
         </main>
     )
 }

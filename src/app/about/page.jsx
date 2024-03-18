@@ -2,6 +2,7 @@ import React from 'react'
 import amirAbout from "../../../public/images/amirAbout.png"
 import Image from 'next/image'
 import Link from 'next/link'
+import End from '../components/End'
 
 function page() {
     return (
@@ -47,6 +48,7 @@ function page() {
                 <div className='mt-10 lg:mt-32'>
                     <p className='text-center font-normal text-sm leading-7 md:leading-normal md:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleriLorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleriLorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleriLorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleriLorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleriLorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleriLorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condim.</p>
                 </div>
+                <End/>
             </div>
 
 

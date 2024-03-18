@@ -51,7 +51,7 @@ function page() {
                             </div>
                                 <Image  src={item.image} className='w-full h-full top-0' alt={item.title} priority />
                             </div>
-                            <h1 className='text-center mt-5 text-base sm:text-xl xl:text-4xl font-bold md:font-medium uppercase'>{item.title}</h1>
+                            <h1 className='text-center mt-5 text-xl xl:text-4xl font-bold md:font-medium uppercase'>{item.title}</h1>
 
                         </Link>
                     ))}
