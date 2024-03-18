@@ -98,7 +98,7 @@ function Page({ params: { category } }) {
                     ))}
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center items-center my-10  '>
+                <div  className='flex justify-center items-center my-10  '>
                     <button onClick={handleLimit} className='inline-block bg-yellow-800 capitalize px-12 py-1.5 rounded-full'>more</button>
                 </div>
 
