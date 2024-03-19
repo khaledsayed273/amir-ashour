@@ -91,7 +91,7 @@ function SwiperHome() {
                     {latestProjects.data.map((item) => (
                         <SwiperSlide key={item.id}  >
                             <Link className='relative w-full h-full block' href={`/project/${item.slug}`}>
-                                <Image priority sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.img} />
+                                <Image aria-label={item.name} priority sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.name} />
                             </Link>
                         </SwiperSlide>
                     ))}
