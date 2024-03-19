@@ -38,7 +38,7 @@ async function page() {
 
                 <div data-aos="fade-up" data-aos-duration="1000" className='relative w-full h-[700px] md:h-[90px] mt-16 mb-20 rounded-xl overflow-hidden border border-grayColor/30'>
                     {setting?.status && (
-                        <div className='flex items-center justify-between md:justify-around flex-col md:flex-row py-10 md:px-16 absolute left-0 top-0 right-0 bottom-0 z-40 lg:border-x lg:mx-10 xl:mx-20 '>
+                        <div className='flex items-center justify-between md:justify-around flex-col md:flex-row py-10 md:px-16 absolute left-0 top-0 right-0 bottom-0 z-40  lg:mx-10 xl:mx-20 '>
                             {setting.data.email && (
 
                                 <Link  className='hover:rotate-[360deg] transition-all duration-500' href={`mailto:${setting.data.email}`} aria-label="gmail">
