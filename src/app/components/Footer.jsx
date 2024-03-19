@@ -19,8 +19,6 @@ export const revalidate = +process.env.time;
 async function Footer() {
 
     const setting = await getSetting()
-    console.log(setting);
-
     const ul = [
         {
             id: 1,
@@ -61,7 +59,7 @@ async function Footer() {
                         <div className='container  flex items-center justify-center mx-auto h-full'>
                             {ul.map((item) => (
                                 item.name === "home" ? (
-                                    <Link key={item.id} className='inline-block md:mx-7 mt-2 md:mt-0' href={`${item.href}`}>
+                                    <Link aria-label="home" key={item.id} className='inline-block md:mx-7 mt-2 md:mt-0' href={`${item.href}`}>
                                         <Logo />
                                     </Link>
                                 ) : (
@@ -77,7 +75,6 @@ async function Footer() {
                     <div className="container mx-auto md:mt-20 mb-5 px-5 h-full mt-16">
                         <div className=" flex flex-col-reverse md:flex-row justify-between items-center">
                             <h1 className='text-sm mt-16 md:mt-0'>© 2023 Megatron company All rights reserved.</h1>
-
 
                             {setting?.status && (
                                 <div className='flex items-center border-y py-4 md:py-0 md:border-0 w-full md:w-auto justify-center '>
@@ -165,8 +162,6 @@ async function Footer() {
 
                                 </div>
                             )}
-
-
 
                         </div>
                     </div>
