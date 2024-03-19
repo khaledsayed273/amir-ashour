@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -11,8 +11,23 @@ import img3 from "../../../../public/images/img3slider.jpeg"
 import { EffectCoverflow, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
+import axios from 'axios';
+import Loading from '../Loading';
 function SwiperHome() {
+    const [latestProjects, setLatestProjects] = useState(false)
 
+    const getLatestProjects = async () => {
+        try {
+            const res = await axios.get(`https://amir.mixtesting.online/api/v1/projects/latest/project`)
+            return setLatestProjects(res.data)
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    useEffect(() => {
+        getLatestProjects()
+    }, [])
 
     const data = [
         {
@@ -52,31 +67,39 @@ function SwiperHome() {
                 </svg>
 
             </div>
-            <Swiper
-            data-aos="fade-up" data-aos-duration="1000"
 
-                effect={'coverflow'}
-                centeredSlides={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 50,
-                    depth: 500,
-                    modifier: 1,
-                    slideShadows: true,
-                }}
-                navigation={true}
-                modules={[EffectCoverflow, Navigation]}
-                className="mySwiperHome"
-            >
-                {data.map((item) => (
-                    <SwiperSlide key={item.id}  >
-                        <Link className='relative w-full h-full block' href={"/services/1/2"}>
-                            <Image priority sizes='(min-width:992px) , 100vw' fill src={item.img} alt={item.img} />
-                        </Link>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            {latestProjects ? (
+
+                <Swiper
+                    initialSlide={1}
+                    data-aos="fade-up" data-aos-duration="1000"
+                    effect={'coverflow'}
+                    centeredSlides={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 50,
+                        depth: 500,
+                        modifier: 1,
+                        slideShadows: true,
+                    }}
+                    navigation={true}
+                    modules={[EffectCoverflow, Navigation]}
+                    className="mySwiperHome"
+                >
+
+                    {latestProjects.data.map((item) => (
+                        <SwiperSlide key={item.id}  >
+                            <Link className='relative w-full h-full block' href={`/project/${item.slug}`}>
+                                <Image priority sizes='(min-width:992px) , 100vw' fill src={item.image} alt={item.img} />
+                            </Link>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            ) : (
+                <Loading />
+            )}
+
         </div>
     )
 }

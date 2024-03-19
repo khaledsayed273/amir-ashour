@@ -1,5 +1,6 @@
 "use client"
-import React, { useState } from 'react'
+import API from '@/api/API'
+import React, { useEffect, useState } from 'react'
 import { Toaster, toast } from 'sonner'
 
 function FormComponent() {
@@ -11,12 +12,31 @@ function FormComponent() {
     const [phone, setPhone] = useState("")
     const [message, setMessage] = useState("")
 
-    const HandleSend = () => {
+    useEffect(() => {
+        setUser_name(`${firstName} ${lastName}`)
+    }, [firstName, lastName])
+
+    const HandleSend = async (e) => {
+        e.preventDefault()
+        try {
+            const req = await API.post(`https://amir.mixtesting.online/api/v1/contact`, { user_name, email, phone, message }, {
+            })
+            toast.success(req?.data?.message)
+            setFirstName("")
+            setLastName("")
+            setUser_name("")
+            setEmail("")
+            setPhone("")
+            setMessage("")
+
+        } catch (e) {
+            toast.error(e?.response?.data?.message)
+        }
 
     }
 
-  return (
-    <>
+    return (
+        <>
             <div data-aos="fade-up" className="bg-white rounded-xl p-5 md:p-7 mt-10">
                 <form>
                     <div data-aos="fade-up" data-aos-duration="1000" className="grid md:grid-cols-2 gap-4 lg:gap-14">
@@ -62,7 +82,7 @@ function FormComponent() {
             </div>
             <Toaster richColors expand={true} position="top-right" />
         </>
-  )
+    )
 }
 
 export default FormComponent

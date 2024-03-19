@@ -53,8 +53,8 @@ function Navbar() {
         <div className={`${style.ulNavbar} bgColor md:bg-transparent md:w-auto justify-center absolute md:static left-0 w-full -z-10 md:z-0 transition-all duration-500  ${open ? "flex mt-12 md:mt-0 top-7" : "flex -top-96 md:opacity-100"}`}>
           <ul className='block  z-50 w-full md:flex'>
             {ul.map((item) => (
-              <li className={`md:mx-5 my-8 text-center md:my-0 text-base lg:text-lg uppercase  hover:text-grayColor ${pathName === item.path ? "text-grayColor" : "text-white"} transition-all font-semibold`} key={item.id}>
-                <Link onClick={() => setOpen(false)} href={item.path}>
+              <li className={`md:mx-5 my-8 text-center md:my-0 `} key={item.id}>
+                <Link className={`text-base lg:text-lg uppercase  hover:text-grayColor ${pathName === item.path ? "text-grayColor" : "text-white"} transition-all font-semibold`} onClick={() => setOpen(false)} href={item.path}>
                   {item.name}
                 </Link>
               </li>

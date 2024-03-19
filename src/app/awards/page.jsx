@@ -6,8 +6,26 @@ import awardImage3 from "../../../public/images/awards/award3.jpeg"
 import awardImage4 from "../../../public/images/awards/award4.jpeg"
 import awardImage5 from "../../../public/images/awards/award5.jpeg"
 import End from '../components/End'
+import API from '@/api/API'
+import Loading from '../components/Loading'
 
-function page() {
+
+async function getAwards() {
+    try {
+        const res = await API.get(`/awards`)
+        return res.data
+    } catch (e) {
+        return e.response.data;
+    }
+}
+
+export const revalidate = +process.env.time;
+
+
+async function page() {
+
+    const awards = await getAwards()
+    console.log(awards);
 
     const data = [
         {
@@ -39,28 +57,36 @@ function page() {
     return (
         <main className='p-2 md:p-3'>
             <div className="container mx-auto text-white md:px-5">
-                <div data-aos="fade-up" data-aos-duration="1000" className="relative w-full h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[700px] my-8 xl:my-2 overflow-hidden rounded-xl border border-amber-500">
-                    <Image placeholder='blur' priority style={{ objectFit: "cover" }} sizes='(max-width:992px), 100vw' fill src={awardImage1} alt='image-award' />
-                    <div className='absolute flex  left-0 top-0 right-0 bottom-0 bg-black/35 '>
 
-                    </div>
-                </div>
-                <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:text-xl font-normal'>
-                    Lorem ipsum dolor sit amet, consecteo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus  egestas mauris amet.
-                </p>
+                {awards?.status ? (
+                    <>
+                        <div data-aos="fade-up" data-aos-duration="1000" className="relative w-full h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[700px] my-8 xl:my-2 overflow-hidden rounded-xl border border-amber-500">
+                            <Image placeholder='blur' priority style={{ objectFit: "cover" }} sizes='(max-width:992px), 100vw' fill src={awardImage1} alt='image-award' />
+                            <div className='absolute flex  left-0 top-0 right-0 bottom-0 bg-black/35 '>
 
-                <div className="grid md:grid-cols-2 gap-5 gap-y-10 my-16">
-                    {data.map((item) => (
-                        <div data-aos="fade-up" data-aos-duration="1000" key={item.id} >
-                            <div className="relative h-[400px] xl:h-[600px] w-full overflow-hidden rounded-2xl">
-                                <Image placeholder='blur' priority sizes='(max-width:992px), 100vw' fill src={item.image} alt={item.title} />
                             </div>
-                            <h1 className='text-center mt-3 capitalize text-2xl'>{item.title}</h1>
-                            <p className='text-center mt-3 text-sm md:text-base px-2 xl:px-10'>{item.about} </p>
-
                         </div>
-                    ))}
-                </div>
+                        <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:text-xl font-normal'>
+                            Lorem ipsum dolor sit amet, consecteo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus  egestas mauris amet.
+                        </p>
+
+                        <div className="grid md:grid-cols-2 gap-5 gap-y-10 my-16">
+                            {awards.data.map((item) => (
+                                <div data-aos="fade-up" data-aos-duration="1000" key={item.id} >
+                                    <div className="relative h-[400px] xl:h-[600px] w-full overflow-hidden rounded-2xl">
+                                        <Image  priority sizes='(max-width:992px), 100vw' fill src={item.image} alt={item.name} />
+                                    </div>
+                                    <h1 className='text-center mt-3 capitalize text-2xl'>{item.name}</h1>
+                                    <p className='text-center mt-3 text-sm md:text-base px-2 xl:px-10'>{item.description} </p>
+
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                ) : (
+                    <Loading />
+                )}
+
 
                 <End />
             </div>
