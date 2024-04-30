@@ -25,7 +25,6 @@ export const revalidate = +process.env.time;
 async function page() {
 
     const awards = await getAwards()
-    console.log(awards);
 
     const data = [
         {

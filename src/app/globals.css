@@ -40,26 +40,30 @@ body {
     
     .mySwiperHome .swiper-button-next,
     .mySwiperHome .swiper-button-prev {
-        top: 550px !important;
+        top: 500px !important;
+    }
+
+    .mySwiperHome .swiper-slide {
+        height: 400px !important;
     }
 }
 
 
 .mySwiperHome {
     margin-top: 50px;
-    height: 800px;
+    height: 650px;
     user-select: none;
 }
 
 .mySwiperHome .swiper-wrapper {
     margin-top: 30px;
-    height: 650px;
+    height: 550px;
 }
 
 
 .mySwiperHome .swiper-slide {
-    width: 395px;
-    height: 649px;
+    width: 400px;
+    height: 520px;
     border-radius: 20px !important;
     overflow: hidden;
     border: 1px solid white;
@@ -68,7 +72,7 @@ body {
 
 .mySwiperHome .swiper-button-next,
 .mySwiperHome .swiper-button-prev {
-    top: 400px ;
+    top: 300px ;
     user-select: none;
     color: white;
 
