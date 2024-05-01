@@ -137,7 +137,7 @@ function Page() {
                     </div>
                     {
                         projects?.data.data.length > 0 ? (
-                            <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-20">
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-20">
                                 {projects.data.data.map((item) => (
                                     category === "book-cover" ? (
                                         <div key={item.id} >
