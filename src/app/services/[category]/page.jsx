@@ -5,38 +5,79 @@ import Link from 'next/link'
 import axios from 'axios'
 import { useParams } from 'next/navigation'
 import Loading from '@/app/components/Loading'
+import Popop from './components/Popop'
 
 function Page() {
-
     const { category } = useParams()
     const [service, setService] = useState(null)
     const [projects, setProjects] = useState(null)
     const [limit, setLimit] = useState(8)
     const [showLoading, setShowLoading] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
+    const [img, setImg] = useState("")
+
+    const convertImage = (w, h) => `
+    <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <linearGradient id="g">
+          <stop stop-color="#333" offset="20%" />
+          <stop stop-color="#222" offset="50%" />
+          <stop stop-color="#333" offset="70%" />
+        </linearGradient>
+      </defs>
+      <rect width="${w}" height="${h}" fill="#333" />
+      <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+      <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+    </svg>`;
+
+    const toBase64 = (str) =>
+        typeof window === 'undefined'
+            ? Buffer.from(str).toString('base64')
+            : window.btoa(str);
+
+    function closeModal() {
+        setIsOpen(false)
+    }
+    function openModal() {
+        setIsOpen(true)
+    }
 
     const getOneService = async () => {
+        setShowLoading(true)
+
         try {
             const res = await axios.get(`https://amir.mixtesting.online/api/v1/services/${category}`)
             return setService(res.data)
         } catch (e) {
             console.log(e);
         }
+        setShowLoading(false)
+
     }
 
     const getProjects = async (newLimit) => {
+        setShowLoading(true)
         try {
-            const res = await axios.get(`https://amir.mixtesting.online/api/v1/projects?limit=${newLimit ? newLimit : limit}&service_id=1`)
-            return setProjects(res)
+
+            const res = await axios.get(`https://amir.mixtesting.online/api/v1/projects?limit=${newLimit ? newLimit : limit}&service_id=${service?.data.id}`)
+            return setProjects(res.data)
         } catch (e) {
             console.log(e);
         }
+        setShowLoading(false)
     }
 
     useEffect(() => {
         getOneService()
-        getProjects()
-
     }, [])
+
+    useEffect(() => {
+        if (service?.status) {
+            getProjects()
+
+        }
+    }, [service?.status])
+
 
     useEffect(() => {
         if (projects?.status) {
@@ -46,19 +87,42 @@ function Page() {
     }, [projects])
 
     const handleLimit = () => {
+        setShowLoading(true)
         let prevLimit = limit + 8
         setLimit(prevLimit)
         getProjects(prevLimit)
-        setShowLoading(true)
+    }
+
+    const cardStyle = (item) => {
+        return (
+            <>
+                <div className="relative w-full h-[400px]  xl:h-[450px]   overflow-hidden rounded-xl border border-orange-400">
+                    <Image
+                        placeholder="blur"
+                        blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                            convertImage(700, 475)
+                        )}`}
+                        sizes='(min-width:992px) , 100vw' src={item.image} fill alt={`${item.name}`} />
+                </div>
+                <div className='absolute top-0 bottom-0 left-0 right-0 rounded-xl bg-black/80 opacity-0 flex justify-center items-center  group-hover:opacity-100 transition-all duration-500'>
+                    <h1 className='text-center capitalize text-xl lg:text-xl'>{item.name}</h1>
+                </div>
+            </>
+        )
+    }
+
+    const handleOpen = (item) => {
+        openModal()
+        setImg(item.image)
     }
 
 
     return (
         <main className='p-2 md:p-3 mt-2 md:mt-5 min-h-screen'>
-            {service?.status ? (
+            {projects?.status ? (
 
                 <div className="container mx-auto text-white md:px-5">
-                    <div data-aos="fade-up" data-aos-duration="1000" className="relative  sm:w-full mx-auto">
+                    <div className="relative  sm:w-full mx-auto">
                         <h1 className='absolute top-6 left-8 md:top-8 md:left-12 xl:top-7 xl:left-14 text-xl md:text-3xl xl:text-[60px] uppercase font-semibold xl:font-medium'>{service.data.name}</h1>
                         <svg className='w-[270px] md:w-[400px] xl:w-[450px]' viewBox="0 0 722 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="104.5" cy="101.5" r="73.5" fill="url(#paint0_radial_122_765)" />
@@ -71,34 +135,34 @@ function Page() {
                             </defs>
                         </svg>
                     </div>
+                    {
+                        projects?.data.data.length > 0 ? (
+                            <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-20">
+                                {projects.data.data.map((item) => (
+                                    category === "book-cover" ? (
+                                        <div key={item.id} >
+                                            <div className='relative hover:scale-105 transition-all duration-500 cursor-pointer group' onClick={() => handleOpen(item)}>
+                                                {cardStyle(item)}
+                                            </div>
 
-                    <div data-aos="fade-up" data-aos-duration="1000" className="relative w-full h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] my-8 xl:my-12 overflow-hidden rounded-xl border border-amber-500">
-                        <Image priority sizes='(max-width:992px), 100vw' src={service.data.image} fill alt='image' />
-                        <div className='absolute flex  left-0 top-0 bottom-0 right-0 bg-black/70'>
-                            <div className='flex flex-col  justify-end p-5 xl:p-10'>
+                                        </div>
+                                    ) : (
+                                        <Link className='hover:scale-105 transition-all duration-500 relative group' key={item.id} href={`/project/${item.slug}`}>
+                                            {cardStyle(item)}
+                                        </Link>
+                                    )
 
-                                <p className='md:text-xl ms-6'>{service.data.description}</p>
+                                ))}
                             </div>
-                        </div>
-                    </div>
-
-
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-20">
-                        {projects?.status ? (
-                            projects.data.data.data.map((item) => (
-                                <Link data-aos="fade-up" data-aos-duration="1000" key={item.id} href={`/project/${item.slug}`}>
-                                    <div className="relative w-full h-[300px] xl:h-[350px] hover:scale-90 transition-all duration-500  overflow-hidden rounded-xl border border-orange-400">
-                                        <Image sizes='(max-width:992px) , 100vw' src={item.image} fill alt={`${item.name}`} />
-                                    </div>
-                                    <h1 className='mt-3 text-center capitalize text-xl lg:text-xl'>{item.name}</h1>
-                                </Link>
-                            ))
                         ) : (
-                            <Loading />
-                        )}
+                            <h1 className='text-center flex justify-center items-center h-[40vh] text-grayColor font-bold capitalize text-xl '>sorry there is no data</h1>
 
+                        )
+                    }
 
-                    </div>
+                    {img && (
+                        <Popop img={img} isOpen={isOpen} setIsOpen={setIsOpen} closeModal={closeModal} />
+                    )}
 
                     <div className='flex flex-col justify-center items-center my-10'>
                         {showLoading && (
@@ -107,8 +171,8 @@ function Page() {
                                 </div>
                             </div>
                         )}
-                        {limit <= projects?.data.data.meta.total && (
-                            <button onClick={handleLimit} className='inline-block mt-16 bg-yellow-800 capitalize px-12 py-1.5 rounded-full'>more</button>
+                        {limit < projects?.data.meta.total && (
+                            <button onClick={handleLimit} className='inline-block mt-7 hover:opacity-70 bg-yellow-800 capitalize px-12 py-1.5 rounded-full'>more</button>
 
                         )}
                     </div>
