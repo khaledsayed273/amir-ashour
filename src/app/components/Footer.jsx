@@ -51,7 +51,7 @@ async function Footer() {
 
     return (
         <footer className='relative h-[290px] md:h-[320px] lg:h-[320px] '>
-            <Image priority style={{ objectFit: "cover" }} src={bg} fill alt='bg'/>
+            <Image placeholder='blur' sizes='(max-width: 768px) 100vw ,(min-width:992px) 50vw' style={{ objectFit: "cover" }} src={bg} fill alt='bg'/>
             <div className="relative h-full">
                 <div className='flex items-center justify-center flex-col absolute left-0 top-0 right-0 bottom-0 z-40 text-white '>
                     <div className=' md:py-4 md:border-y w-full md:mt-24'>
