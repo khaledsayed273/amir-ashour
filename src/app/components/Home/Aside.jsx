@@ -29,41 +29,40 @@ function Aside() {
                 </svg>
 
 
+
+
                 <div data-aos="fade-up" data-aos-duration="1000" className='mt-3.5 lg:mt-16'>
                     <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <div className='flex items-center'>
-                                <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Visual Company</h1>
-                                <h2 className='ms-5  md:mt-4 text-sm md:text-xl font-normal'>(2020 : current)</h2>
-                            </div>
-                        </div>
-                        <p className='text-sm md:text-xl font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.</p>
+                        <p className='text-sm md:text-xl font-normal'>
+                            Brand Identity Design: this involves creating visual elements such as logos, color palettes, typography, and imagery that represent the brand and help it stand out.
+                            Digital Branding: this branch focuses on creating a consistent brand presence across digital platforms such as websites, social media, and mobile apps.
+                            Brand Experience Design: this branch focuses on creating a seamless and engaging experience for customers at every touchpoint with the brand.
+                        </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <div className='flex items-center'>
-                                <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Graphic Company </h1>
-                                <h2 className='ms-5 md:mt-4 text-sm md:text-xl font-normal'>(2020 : current)</h2>
-                            </div>
-                        </div>
-                        <p className='text-sm md:text-xl font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.</p>
+                        <p className='text-sm md:text-xl font-normal'>
+                            Social media design
+                            .
+                            Understand different social media platforms and their image size requirements to create optimized designs for each channel.
+                            . Creativity: The ability to think creatively and come up with unique design concepts that resonate with your target audience is key to creating
+                            engaging social media content.
+                            . Adaptability: Social media trends and algorithms are constantly evolving, the ability to adapt and learn new design techniques and tools
+                        </p>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <div className='flex items-center'>
-                                <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Design Company  </h1>
-                                <h2 className='ms-5 md:mt-4 text-sm md:text-xl font-normal'>(2020 : 2021)</h2>
-                            </div>
-                        </div>
-                        <p className='text-sm md:text-xl font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus leo egestas mauris amet.</p>
+                        <p className='text-sm md:text-xl font-normal'>
+                            Designing movie and album posters
+                            I designed many posters for films, plays, and concerts for the biggest celebrities in the Arab world
+                        </p>
                     </div>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
+                        <p className='text-sm md:text-xl font-normal'>
+                        Designing book covers in the Arab world and Europe with the most creative publishing houses
+                        </p>
+                    </div>
+
                 </div>
+
 
             </div>
 

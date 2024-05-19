@@ -18,10 +18,10 @@ function Header() {
                             <svg width="32" height="30" viewBox="0 0 240 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <line y1="19" x2="190" y2="19" stroke="white" strokeWidth="7" />
                             </svg>
-                            <h1 className='capitalize text-base md:text-2xl ms-0'>designer</h1>
+                            <h1 className='capitalize text-base md:text-2xl ms-0'>Graphic designer</h1>
                         </div>
                         <div className='text-sm hidden  md:block'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleri
+                        Egyptian graphic designer 10 years in the field of advertising, branding and social media design, Book covers of some novels, covers, posters, and Other business
                         </div>
                     </div>
                 </div>

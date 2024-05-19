@@ -4,9 +4,9 @@ import React from 'react'
 function Section() {
     return (
         <section data-aos="fade-up" data-aos-duration="1000" className='relative text-white py-2 px-1 md:p-5'>
-            <div data-aos="fade-up" data-aos-duration="1000" className='text-base block font-semibold  md:hidden mb-7 text-center'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque et, condimentum iaculis ac. Enim leo sit vestibulum vulputate placerat vulputate. Quis egestas pellentesque faucisceleri
-            </div>
+            <p data-aos="fade-up" data-aos-duration="1000" className='text-base block font-semibold px-2  md:hidden mb-7 text-center'>
+            EGYPTIAN GRAPHIC DESIGNER 10 YEARS IN THE FIELD OF ADVERTISING, BRANDING AND SOCIAL MEDIA DESIGN, BOOK COVERS OF SOME NOVELS, COVERS, POSTERS, AND OTHER BUSINESS
+            </p>
             <div data-aos="fade-up" data-aos-duration="1000" className='flex justify-center items-center '>
                 <Link className='bg-white flex justify-center items-center text-lg lg:text-2xl text-black static mt-7   w-[140px]  lg:w-[268px] h-[40px] lg:h-[72px] rounded-full font-bold capitalize shadow-lg shadow-white/40 hover:opacity-75' href={"/contact"}>contact</Link>
             </div>
@@ -29,51 +29,130 @@ function Section() {
                 </svg>
 
 
-                <div data-aos="fade-up" data-aos-duration="1000" className='flex gap-2 sm:flex-row justify-between md:justify-around  '>
-                    <div >
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div className='md:ms-5'>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-10'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Proficiency in Design Software  </h1>
+                                </div>
                             </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Visual design</h2>
+                            <p className='text-sm md:text-xl font-normal'> Mastery of design tools such as Adobe Creative Suite (Photoshop, Illustrator, InDesign), Sketch, or other industry-standard software</p>
                         </div>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Creative Thinking</h1>
+                                </div>
                             </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Problem solving</h2>
+                            <p className='text-sm md:text-xl font-normal'>Ability to generate innovative ideas and concepts, as well as translate them into visually appealing designs.</p>
                         </div>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Typography</h1>
+                                </div>
                             </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Design thinking</h2>
+                            <p className='text-sm md:text-xl font-normal'>Understanding of typography principles and the ability to effectively use fonts to enhance design aesthetics and readability.</p>
                         </div>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Color Theory</h1>
+                                </div>
                             </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Content create</h2>
+                            <p className='text-sm md:text-xl font-normal'>Knowledge of color psychology and the ability to create harmonious color palettes that evoke desired emotions or convey specific messages.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Layout and Composition</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'>Strong grasp of layout principles to organize visual elements in a balanced and compelling way.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Attention to Detail</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'>Ability to pay close attention to details such as spacing, alignment, and consistency to ensure high-quality design output.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Communication Skills</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'> Effective communication with clients, team members, and stakeholders to understand project requirements and present design concepts.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Time Management</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'>Capacity to manage multiple projects simultaneously and meet deadlines while maintaining quality standards.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Problem-Solving</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'> Aptitude for identifying design challenges and developing creative solutions to address them effectively.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Understanding of Branding</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'>Knowledge of branding principles and the ability to create designs that align with brand identity and messaging.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Digital Skills</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'> Familiarity with web design principles, UI/UX concepts, and responsive design techniques for digital platforms.</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="1000" className='mt-16'>
+                            <div className='flex justify-start items-center my-7'>
+                                <div className='bg-grayColor w-3 h-3 rounded-full'>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Print Production Knowledg</h1>
+                                </div>
+                            </div>
+                            <p className='text-sm md:text-xl font-normal'>Understanding of print processes, including le preparation, color management, and prepress requirements, for producing high-quality print materials.</p>
                         </div>
                     </div>
-                    <div >
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Visual design</h2>
-                        </div>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Problem solving</h2>
-                        </div>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Design thinking</h2>
-                        </div>
-                        <div className='flex justify-start items-center my-7'>
-                            <div className='bg-grayColor w-3 h-3 rounded-full'>
-                            </div>
-                            <h2 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Content create</h2>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
 

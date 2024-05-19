@@ -65,15 +65,22 @@ async function page() {
 
                             </div>
                         </div>
-                        <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:text-xl font-normal'>
-                            Lorem ipsum dolor sit amet, consecteo egestas mauris amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum elementum pharetra elementum iaculis consequat. Lectus  egestas mauris amet.
+                        <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:text-xl font-normal mt-5'>
+                            Egyptian graphic designer
+                            10 years in the field of advertising, branding and social media design,
+                            Book covers of some novels, covers, posters, and
+                            Other business
+                            I studied Arabic calligraphy and its uses in my designs
+                            Specializing in designing book covers, I have designed more than 400 book covers in
+                            Egypt, the Arab world, and Europe
+                            Book cover designs have won some awards
                         </p>
 
                         <div className="grid md:grid-cols-2 gap-5 gap-y-10 my-16">
                             {awards.data.map((item) => (
                                 <div data-aos="fade-up" data-aos-duration="1000" key={item.id} >
                                     <div className="relative h-[400px] xl:h-[600px] w-full overflow-hidden rounded-2xl">
-                                        <Image  priority sizes='(max-width:992px), 100vw' fill src={item.image} alt={item.name} />
+                                        <Image priority sizes='(max-width:992px), 100vw' fill src={item.image} alt={item.name} />
                                     </div>
                                     <h1 className='text-center mt-3 capitalize text-2xl'>{item.name}</h1>
                                     <p className='text-center mt-3 text-sm md:text-base px-2 xl:px-10'>{item.description} </p>
