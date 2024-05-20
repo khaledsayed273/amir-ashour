@@ -3,6 +3,10 @@ import React from 'react'
 function Aside() {
     return (
         <aside>
+         <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col justify-center items-center mt-8 lg:mt-16 mb-7 text-xl sm:text-2xl md:text-4xl font-semibold text-white'>
+                <h1 className='font-medium text-2xl md:text-3xl xl:text-4xl'>HEY THERE !</h1>
+                <h1 className='mt-4 font-medium text-2xl md:text-3xl xl:text-4xl'>THIS IS MY PORTFOLIO</h1>
+            </div>
             <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto p-3 md:p-5 text-white">
                 <svg className='w-[190px] sm:w-[250px]  lg:w-[320px] ' viewBox="0 0 542 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="104.5" cy="101.5" r="73.5" fill="url(#paint0_radial_122_393)" />

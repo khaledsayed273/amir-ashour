@@ -8,7 +8,7 @@ function Section() {
             EGYPTIAN GRAPHIC DESIGNER 10 YEARS IN THE FIELD OF ADVERTISING, BRANDING AND SOCIAL MEDIA DESIGN, BOOK COVERS OF SOME NOVELS, COVERS, POSTERS, AND OTHER BUSINESS
             </p>
            
-            
+           
 
             <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto p-2 mt-7 md:p-5">
                 <svg className='w-[120px] sm:w-[150px]  lg:w-[200px] md:my-5 xl:my-0' viewBox="0 0 322 175" fill="none" xmlns="http://www.w3.org/2000/svg">
