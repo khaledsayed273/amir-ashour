@@ -59,16 +59,7 @@ async function page() {
 
                 {awards?.status ? (
                     <>
-                        <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:text-xl font-normal mt-5'>
-                            Egyptian graphic designer
-                            10 years in the field of advertising, branding and social media design,
-                            Book covers of some novels, covers, posters, and
-                            Other business
-                            I studied Arabic calligraphy and its uses in my designs
-                            Specializing in designing book covers, I have designed more than 400 book covers in
-                            Egypt, the Arab world, and Europe
-                            Book cover designs have won some awards
-                        </p>
+                      
 
                         <div className="grid md:grid-cols-2 gap-5 gap-y-10 my-16">
                             {awards.data.map((item) => (
