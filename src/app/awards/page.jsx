@@ -59,12 +59,6 @@ async function page() {
 
                 {awards?.status ? (
                     <>
-                        <div data-aos="fade-up" data-aos-duration="1000" className="relative w-full h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[700px] my-8 xl:my-2 overflow-hidden rounded-xl border border-amber-500">
-                            <Image placeholder='blur' priority style={{ objectFit: "cover" }} sizes='(max-width:992px), 100vw' fill src={awardImage1} alt='image-award' />
-                            <div className='absolute flex  left-0 top-0 right-0 bottom-0 bg-black/35 '>
-
-                            </div>
-                        </div>
                         <p data-aos="fade-up" data-aos-duration="1000" className='text-center text-sm md:text-xl font-normal mt-5'>
                             Egyptian graphic designer
                             10 years in the field of advertising, branding and social media design,
@@ -92,8 +86,6 @@ async function page() {
                 ) : (
                     <Loading />
                 )}
-
-
                 <End />
             </div>
 
