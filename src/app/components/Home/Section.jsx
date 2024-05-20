@@ -7,8 +7,11 @@ function Section() {
             <p data-aos="fade-up" data-aos-duration="1000" className='text-base block font-semibold px-2  md:hidden mb-7 text-center'>
             EGYPTIAN GRAPHIC DESIGNER 10 YEARS IN THE FIELD OF ADVERTISING, BRANDING AND SOCIAL MEDIA DESIGN, BOOK COVERS OF SOME NOVELS, COVERS, POSTERS, AND OTHER BUSINESS
             </p>
-           
-           
+          
+            <div data-aos="fade-up" data-aos-duration="1000" className='flex flex-col justify-center items-center mt-8 lg:mt-14 text-xl sm:text-2xl md:text-4xl font-semibold'>
+                <h1 className='font-medium text-2xl md:text-3xl xl:text-4xl'>HEY THERE !</h1>
+                <h1 className='mt-4 font-medium text-2xl md:text-3xl xl:text-4xl'>THIS IS MY PORTFOLIO</h1>
+            </div>
 
             <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto p-2 mt-7 md:p-5">
                 <svg className='w-[120px] sm:w-[150px]  lg:w-[200px] md:my-5 xl:my-0' viewBox="0 0 322 175" fill="none" xmlns="http://www.w3.org/2000/svg">

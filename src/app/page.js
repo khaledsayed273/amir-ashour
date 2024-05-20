@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Aside />
       <Section />
+      <Aside />
       <SwiperHome />
       <End />
     </main>
