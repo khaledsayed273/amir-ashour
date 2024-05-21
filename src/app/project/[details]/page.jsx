@@ -25,15 +25,7 @@ async function page({ params: { details } }) {
     return (
         <main className='p-2 md:p-3 mt-2 md:mt-3 min-h-screen'>
 
-            <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto text-white md:px-5">
-                <div className="relative mx-auto w-full lg:w-3/5 h-[450px] sm:h-[400px] lg:h-[500px] xl:h-[600px] my-8 xl:mt-2  overflow-hidden rounded-xl border border-amber-500">
-                    <Image priority src={data.data.image} fill alt='image' />
-                    <div className='absolute flex justify-center left-0  right-0 bottom-0  bg-[#100f14] text-center text-white py-3 px-10 font-semibold text-sm md:text-lg xl:text-xl rounded-t-xl  '>
-                        {data.data.name}
-                    </div>
-                </div>
-                <p className='text-center text-sm md:text-xl font-normal'>{data.description}</p>
-            </div>
+            
             {defualtStatus ? (
                 data.status ? (
                     <div className='container mx-auto md:px-5'>
