@@ -3,22 +3,11 @@ import Logo from './Logo'
 import Link from 'next/link'
 import Image from 'next/image'
 import bg from "../../../public/images/backgroundImage.jpeg"
-import API from '@/api/API'
 
-async function getSetting() {
-    try {
-        const res = await API.get(`/settings`)
-        return res.data
-    } catch (e) {
-        return e.response.data;
-    }
-}
 
-export const revalidate = +process.env.time;
+async function Footer({setting}) {
 
-async function Footer() {
 
-    const setting = await getSetting()
     const ul = [
         {
             id: 1,

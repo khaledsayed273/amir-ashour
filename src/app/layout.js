@@ -2,6 +2,7 @@ import { Poppins } from 'next/font/google';
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
+import API from '@/api/API';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -15,13 +16,28 @@ export const metadata = {
   description: "Amir Ashour Site",
 };
 
-export default function RootLayout({ children }) {
+async function getSetting() {
+    try {
+        const res = await API.get(`/settings`)
+        return res.data
+    } catch (e) {
+        return e.response.data;
+    }
+}
+
+export const revalidate = +process.env.time;
+
+
+export default async function RootLayout({ children }) {
+
+  const setting = await getSetting()
+
   return (
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
         {children}
-        <Footer />
+        <Footer setting={setting} />
       </body>
     </html>
   );

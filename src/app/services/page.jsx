@@ -17,6 +17,7 @@ export const revalidate = +process.env.time;
 
 async function page() {
 
+
     const { data: { data, status } } = await getService()
 
     return (
