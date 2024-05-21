@@ -34,7 +34,7 @@ function Popop({img, isOpen, closeModal }) {
             >
               <Dialog.Panel className="w-full h-[70vh]  relative max-w-xl transform overflow-hidden rounded-2xl  p-6 shadow-xl transition-all">
               
-                <Image  fill src={img} alt='img'/>
+                <Image fill src={img} alt='img'/>
 
                 
               </Dialog.Panel>

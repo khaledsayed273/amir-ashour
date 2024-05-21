@@ -103,7 +103,7 @@ function Page() {
                         blurDataURL={`data:image/svg+xml;base64,${toBase64(
                             convertImage(700, 475)
                         )}`}
-                        sizes='(max-width: 768px) 100vw ,(min-width:992px) 50vw' src={item.image} fill alt={`${item.name}`} />
+                        sizes='(max-width: 768px) 100vw ,(min-width:992px) 100vw' style={{objectFit: "cover"}} src={item.image} fill alt={`${item.name}`} />
                 </div>
                 <div className='absolute top-0 bottom-0 left-0 right-0 rounded-xl bg-black/80 opacity-0 flex justify-center items-center  group-hover:opacity-100 transition-all duration-500'>
                     <h1 className='text-center capitalize text-xl lg:text-xl'>{item.name}</h1>
