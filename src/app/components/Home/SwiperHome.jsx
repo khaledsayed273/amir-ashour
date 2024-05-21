@@ -4,10 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
-import img1 from "../../../../public/images/img1slider.jpeg"
-import img2 from "../../../../public/images/img2slider.jpeg"
-import img3 from "../../../../public/images/img3slider.jpeg"
-
 import { EffectCoverflow, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,30 +24,6 @@ function SwiperHome() {
     useEffect(() => {
         getLatestProjects()
     }, [])
-
-    const data = [
-        {
-            id: 1,
-            about: "During a train ride, a moment of inspiration struck Vasily. He wished for a convenient study tool on his phone to help him prepare for the LSAT. However, such an app didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
-            img: img2,
-            name: "Aya alaa"
-        },
-        {
-            id: 2,
-            about: "During a train ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
-            img: img1,
-            name: "Mohamed abdElmaksoud"
-
-        },
-        {
-            id: 3,
-            about: "During  ride, a moment of inspiration struck  didn&apos;t exist at the time. Determined to overcome this hurdle, Vasily took matters into his own hands and developed one of the earliest and most comprehensive LSAT apps on the market. The app quickly gained popularity, becoming the #1 paid LSAT app for over a year.",
-            img: img3,
-            name: "khaled sayed"
-        },
-
-    ]
-
 
     return (
         <div>
