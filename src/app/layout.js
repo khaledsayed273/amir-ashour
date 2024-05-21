@@ -25,7 +25,6 @@ async function getSetting() {
     }
 }
 
-
 export const revalidate = +process.env.time;
 
 
