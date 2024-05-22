@@ -19,7 +19,7 @@ function FormComponent() {
     const HandleSend = async (e) => {
         e.preventDefault()
         try {
-            const req = await API.post(`https://amir.mixtesting.online/api/v1/contact`, { user_name, email, phone, message }, {
+            const req = await API.post(`https://admin.vintage-artgallery.com/api/v1/contact`, { user_name, email, phone, message }, {
             })
             toast.success(req?.data?.message)
             setFirstName("")
@@ -28,6 +28,7 @@ function FormComponent() {
             setEmail("")
             setPhone("")
             setMessage("")
+            console.log(req);
 
         } catch (e) {
             toast.error(e?.response?.data?.message)
