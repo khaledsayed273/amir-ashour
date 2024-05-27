@@ -25,18 +25,26 @@ async function page({ params: { details } }) {
     return (
         <main className='p-2 md:p-3 mt-2 md:mt-3 min-h-screen'>
 
-            
+
             {defualtStatus ? (
                 data.status ? (
                     <div className='container mx-auto md:px-5'>
-                        {data.data.images.map((item, index) => (
-                            <Image key={index} layout="responsive" width={500} height={200} alt={index} src={item.path} />
-                        ))}
+                        {data.data.images.length > 0 ? (
+
+                            data.data.images.map((item, index) => (
+                                <Image key={index} layout="responsive" width={500} height={200} alt={index} src={item.path} />
+                            ))
+
+                        ) : 
+                    <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
+                        there is no images
+                    </h3>
+                    }
                     </div>
                 ) : (
-                    <div className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
+                    <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
                         {data.message}
-                    </div>
+                    </h3>
                 )
             ) : (
                 <Loading />
