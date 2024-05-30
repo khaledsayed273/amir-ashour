@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useParams } from 'next/navigation'
 import Loading from '@/app/components/Loading'
 import Popop from './components/Popop'
+import { useRouter } from 'next/navigation'
 
 function Page() {
     const { category } = useParams()
@@ -16,6 +17,7 @@ function Page() {
     const [showLoading, setShowLoading] = useState(false)
     const [isOpen, setIsOpen] = useState(true)
     const [img, setImg] = useState("")
+    const router = useRouter()
 
     const convertImage = (w, h) => `
     <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -45,14 +47,13 @@ function Page() {
 
     const getOneService = async () => {
         setShowLoading(true)
-
         try {
             const res = await axios.get(`https://amir.mixtesting.online/api/v1/services/${category}`)
+            setShowLoading(false)
             return setService(res.data)
         } catch (e) {
-            console.log(e);
+            router.push('/notFound')
         }
-        setShowLoading(false)
 
     }
 
