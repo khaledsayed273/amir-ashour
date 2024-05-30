@@ -7,6 +7,7 @@ import API from '@/api/API'
 async function getService() {
     try {
         const res = await API.get(`/services`)
+
         return res
     } catch (e) {
         console.log(e);
@@ -16,7 +17,6 @@ async function getService() {
 export const revalidate = +process.env.time;
 
 async function page() {
-
 
     const { data: { data, status } } = await getService()
 
