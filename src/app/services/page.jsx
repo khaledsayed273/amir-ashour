@@ -40,7 +40,7 @@ async function page() {
                     )}
 
 
-                </div>
+                </div> 
             </div>
         </main>
     )
