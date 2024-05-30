@@ -34,7 +34,7 @@ function Popop({img, isOpen, closeModal }) {
             >
               <Dialog.Panel className="w-full h-[70vh] md:h-[70vh]  relative max-w-xl transform overflow-hidden rounded-2xl  p-6 shadow-xl transition-all">
               
-                <Image sizes='100%' fill src={img} alt='img'/>
+                <Image style={{objectFit: "cover"}} sizes='100%' fill src={img} alt='img'/>
 
                 
               </Dialog.Panel>
