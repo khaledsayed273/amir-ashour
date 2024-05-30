@@ -12,7 +12,7 @@ function End() {
     }
 
     return (
-        <div data-aos="fade-up" data-aos-duration="1000" className="container mx-auto p-3 mt-10 ">
+        <div className="container mx-auto p-3 mt-10 ">
             <div className='text-white relative h-[300px] md:h-[450px] overflow-hidden rounded-2xl mb-10'>
                 <Image style={{objectFit: "cover"}} priority src={bg} fill alt='bg' />
                 <div className='absolute z-40 left-0 top-0 bottom-0 right-0 flex flex-col justify-center items-center'>
