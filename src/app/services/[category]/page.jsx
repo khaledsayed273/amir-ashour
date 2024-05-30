@@ -99,6 +99,7 @@ function Page() {
             <>
                 <div className="relative w-full h-[400px]  xl:h-[450px]   overflow-hidden rounded-xl border border-orange-400">
                     <Image
+                    
                         placeholder="blur"
                         blurDataURL={`data:image/svg+xml;base64,${toBase64(
                             convertImage(700, 475)
