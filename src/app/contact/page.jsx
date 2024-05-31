@@ -27,8 +27,7 @@ async function page() {
     const setting = await getSetting()
 
     return (
-        <main className='p-2 md:p-3 mt-10 ' >
-            <div className="container mx-auto  md:px-5">
+            <div className="container p-2 md:p-5  mx-auto ">
                 <svg data-aos="fade-up" data-aos-duration="1000" className='mx-auto w-[200px] sm:w-[300px] md:w-[350px] xl:w-[635px] lg:h-[150px]' viewBox="0 0 635 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="104.5" cy="101.5" r="73.5" fill="url(#paint0_radial_122_554)" />
                     <circle cx="81.5" cy="81.5" r="80.5" stroke="#D69D66" strokeWidth="2" />
@@ -136,7 +135,6 @@ async function page() {
                     <Image priority sizes='(min-width:992px) , 100vw' fill style={{ objectFit: "cover" }} alt='backgroundImage' src={backgroundImage} />
                 </div>
             </div>
-        </main>
     )
 }
 

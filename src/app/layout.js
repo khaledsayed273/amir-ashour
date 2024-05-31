@@ -17,12 +17,12 @@ export const metadata = {
 };
 
 async function getSetting() {
-    try {
-        const res = await API.get(`/settings`)
-        return res.data
-    } catch (e) {
-        return e.response.data;
-    }
+  try {
+    const res = await API.get(`/settings`)
+    return res.data
+  } catch (e) {
+    return e.response.data;
+  }
 }
 
 export const revalidate = +process.env.time;
@@ -36,7 +36,9 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
-        {children}
+        <main className='mt-2 md:mt-3 min-h-screen mb-10'>
+          {children}
+        </main>
         <Footer setting={setting} />
       </body>
     </html>

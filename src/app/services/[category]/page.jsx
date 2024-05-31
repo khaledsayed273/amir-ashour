@@ -121,7 +121,7 @@ function Page() {
 
 
     return (
-        <main className='p-2 md:p-3 mt-2 md:mt-5 min-h-screen'>
+        <div className='p-2 md:p-3'>
             {projects?.status ? (
 
                 <div className="container mx-auto text-white md:px-5">
@@ -140,7 +140,7 @@ function Page() {
                     </div>
                     {
                         projects?.data.data.length > 0 ? (
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-20">
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-14">
                                 {projects.data.data.map((item) => (
                                     category === "book-cover" ? (
                                         <div key={item.id} >
@@ -187,7 +187,7 @@ function Page() {
             )}
 
 
-        </main>
+        </div>
     )
 }
 

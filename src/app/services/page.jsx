@@ -28,7 +28,7 @@ async function page() {
     const { data: { data, status } } = await getService()
 
     return (
-        <main className='p-2 md:p-3 mt-10'>
+        <div className='p-2 md:p-3'>
             <div className="container mx-auto text-white md:px-5">
                 <div data-aos="fade-up" data-aos-duration="1000" className="grid md:grid-cols-2 gap-x-2 gap-y-10 md:gap-10 mb-5">
                     {status && (
@@ -49,7 +49,7 @@ async function page() {
 
                 </div> 
             </div>
-        </main>
+        </div>
     )
 }
 
