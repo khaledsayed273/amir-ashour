@@ -61,7 +61,7 @@ async function Footer({setting}) {
 
                     <div className="container mx-auto md:mt-20 mb-5 px-5 h-full mt-16">
                         <div className=" flex flex-col-reverse md:flex-row justify-between items-center">
-                            <h1 className='text-sm mt-16 md:mt-0'>© 2024 Megatron company All rights reserved.</h1>
+                            <p className='text-sm mt-16 md:mt-0'>© 2024 <Link target='_blank' className='text-orange-500 0 hover:opacity-80' href={"https://www.megatron-soft.com"}>Megatron</Link> company All rights reserved.</p>
 
                             {setting?.status && (
                                 <div className='flex items-center border-y py-4 md:py-0 md:border-0 w-full md:w-auto justify-center '>
