@@ -4,6 +4,19 @@ import Loading from '@/app/components/Loading'
 import Image from 'next/image'
 
 
+
+
+async function getProjectDetails(details) {
+    try {
+        const res = await API.get(`/projects/${details}`)
+        return res.data
+    } catch (e) {
+        return e.response.data;
+    }
+}
+
+
+
 export async function generateMetadata({ params: {details} }) {
     try {
         const res = await API.get(`/projects/${details}`)
@@ -17,15 +30,6 @@ export async function generateMetadata({ params: {details} }) {
     }
 }
 
-async function getProjectDetails(details) {
-    try {
-        const res = await API.get(`/projects/${details}`)
-
-        return res.data
-    } catch (e) {
-        return e.response.data;
-    }
-}
 
 export const revalidate = +process.env.time;
 
