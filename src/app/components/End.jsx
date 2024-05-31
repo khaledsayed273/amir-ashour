@@ -1,15 +1,11 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import bg from "../../../public/images/backgroundImage.jpeg"
 import Image from 'next/image'
 import Link from 'next/link'
 
 function End() {
-    const [email, setEmail] = useState("")
-
-    const handleSend = () => {
-
-    }
+    
 
     return (
         <div className="container mx-auto p-3 mt-10 ">

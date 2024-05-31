@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 
 function Section() {
@@ -147,7 +146,7 @@ function Section() {
                                     <h1 className='text-base lg:text-3xl ms-2 font-light md:font-semibold'>Print Production Knowledg</h1>
                                 </div>
                             </div>
-                            <p className='text-sm md:text-xl font-normal'>Understanding of print processes, including le preparation, color management, and prepress requirements, for producing high-quality print materials.</p>
+                            <p className='text-sm md:text-xl font-normal'>Understanding of print processes, including file preparation, color management, and prepress requirements, for producing high-quality print materials.</p>
                         </div>
                     </div>
                  
