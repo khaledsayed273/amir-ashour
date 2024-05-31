@@ -30,29 +30,29 @@ async function page({ params: { details } }) {
 
     const data = await getProjectDetails(details)
     return (
-            <div className='p-2 md:p-3 '>
-                {
-                    data.status ? (
-                        <div className='container mx-auto md:px-5 my-5'>
-                            {data.data.images.length > 0 ? (
+        <div className='p-2 md:p-3 '>
+            {
+                data.status ? (
+                    <div className='container mx-auto md:px-5 my-5'>
+                        {data.data.images.length > 0 ? (
 
-                                data.data.images.map((item, index) => (
-                                    <Image key={index} layout="responsive" width={500} height={200} alt={index} src={item.path} />
-                                ))
+                            data.data.images.map((item, index) => (
+                                <Image key={index} layout="responsive" width={500} height={200} alt={index} src={item.path} />
+                            ))
 
-                            ) :
-                                <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
-                                    there is no images
-                                </h3>
-                            }
-                        </div>
-                    ) : (
-                        <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
-                            this product not found
-                        </h3>
-                    )
-                }
-            </div>
+                        ) :
+                            <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
+                                there is no images
+                            </h3>
+                        }
+                    </div>
+                ) : (
+                    <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
+                        this product was not found
+                    </h3>
+                )
+            }
+        </div>
     )
 }
 
