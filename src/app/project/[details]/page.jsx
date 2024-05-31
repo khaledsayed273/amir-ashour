@@ -47,7 +47,7 @@ async function page({ params: { details } }) {
 
             {defualtStatus ? (
                 data.status ? (
-                    <div className='container mx-auto md:px-5'>
+                    <div className='container mx-auto md:px-5 my-5'>
                         {data.data.images.length > 0 ? (
 
                             data.data.images.map((item, index) => (
