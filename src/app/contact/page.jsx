@@ -3,8 +3,14 @@ import FormComponent from './components/FormComponent'
 import Image from 'next/image'
 import backgroundImage from "../../../public/images/backgroundImage.jpeg"
 import Link from 'next/link'
-import End from '../components/End'
 import API from '@/api/API'
+
+
+export const metadata = {
+    title: 'Contact',
+    keywords: 'Contact , Amir ashour',
+    description: "Contact Us"
+}
 
 async function getSetting() {
     try {

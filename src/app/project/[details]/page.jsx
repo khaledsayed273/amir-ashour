@@ -3,9 +3,24 @@ import API from '@/api/API'
 import Loading from '@/app/components/Loading'
 import Image from 'next/image'
 
+
+export async function generateMetadata({ params: {details} }) {
+    try {
+        const res = await API.get(`/projects/${details}`)
+        return {
+            title: res.data.data.name,
+            keywords: res.data.data.name,
+            description: `Amir Ashour ${res.data.data.name}`
+        }
+    } catch (e) {
+        return
+    }
+}
+
 async function getProjectDetails(details) {
     try {
         const res = await API.get(`/projects/${details}`)
+
         return res.data
     } catch (e) {
         return e.response.data;
@@ -35,11 +50,11 @@ async function page({ params: { details } }) {
                                 <Image key={index} layout="responsive" width={500} height={200} alt={index} src={item.path} />
                             ))
 
-                        ) : 
-                    <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
-                        there is no images
-                    </h3>
-                    }
+                        ) :
+                            <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>
+                                there is no images
+                            </h3>
+                        }
                     </div>
                 ) : (
                     <h3 className='h-[80vh] text-red-600 capitalize font-bold md:text-xl w-full flex justify-center items-center'>

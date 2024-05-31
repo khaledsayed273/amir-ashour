@@ -4,6 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import End from '../components/End'
 
+
+export const metadata = {
+    title: 'About',
+    keywords: 'About , Amir ashour',
+    description: "a creative professional responsible for conceptualizing and creating visual designs to communicate ideas or messages. work across various mediums such as print, digital, and multimedia to produce designs for branding, marketing materials, publications, websites, and more. Graphic designers typically possess strong skills in sofwware tools like Adobe Creative Suite (Photoshop, Illustrator, InDesign), as well as an understanding of design principles, typography, color theory, and layout techniques. collaborate with clients, art directors, or marketing teams to understand project requirements and deliver designs that meet objectives while conveying the desired message effectively."
+}
+
+
 function page() {
 
     const left = () => (
