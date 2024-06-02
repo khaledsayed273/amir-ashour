@@ -5,8 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 function End() {
-    
-
     return (
         <div className="container mx-auto p-3 mt-10 ">
             <div className='text-white relative h-[300px] md:h-[450px] overflow-hidden rounded-2xl mb-10'>

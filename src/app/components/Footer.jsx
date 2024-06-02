@@ -6,8 +6,6 @@ import bg from "../../../public/images/backgroundImage.jpeg"
 
 
 async function Footer({setting}) {
-
-
     const ul = [
         {
             id: 1,
@@ -35,9 +33,7 @@ async function Footer({setting}) {
             href: "/contact"
         },
     ]
-
-
-
+    
     return (
         <footer className='relative h-[290px] md:h-[320px] lg:h-[320px] '>
             <Image placeholder='blur' sizes='(max-width: 768px) 100vw ,(min-width:992px) 50vw' style={{ objectFit: "cover" }} src={bg} fill alt='bg'/>

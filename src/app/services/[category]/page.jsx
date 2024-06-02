@@ -13,7 +13,7 @@ function Page() {
     const { category } = useParams()
     const [service, setService] = useState(null)
     const [projects, setProjects] = useState(null)
-    const [limit, setLimit] = useState(8)
+    const [limit, setLimit] = useState(16)
     const [showLoading, setShowLoading] = useState(false)
     const [isOpen, setIsOpen] = useState(true)
     const [img, setImg] = useState("")
@@ -90,7 +90,7 @@ function Page() {
 
     const handleLimit = () => {
         setShowLoading(true)
-        let prevLimit = limit + 8
+        let prevLimit = limit + 16
         setLimit(prevLimit)
         getProjects(prevLimit)
     }
@@ -98,7 +98,7 @@ function Page() {
     const cardStyle = (item) => {
         return (
             <>
-                <div className="relative w-full h-[400px]  xl:h-[450px]   overflow-hidden rounded-xl border border-orange-400">
+                <div className="relative w-full h-[400px]  xl:h-[450px]   overflow-hidden rounded-xl border border-gray-800">
                     <Image
                     
                         placeholder="blur"
@@ -142,7 +142,7 @@ function Page() {
                         projects?.data.data.length > 0 ? (
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-10 lg:gap-10 mb-10 mt-14">
                                 {projects.data.data.map((item) => (
-                                    category === "book-cover" ? (
+                                    category === "book-cover" || "typography" ? (
                                         <div key={item.id} >
                                             <div className='relative hover:scale-105 transition-all duration-500 cursor-pointer group' onClick={() => handleOpen(item)}>
                                                 {cardStyle(item)}
