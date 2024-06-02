@@ -121,7 +121,6 @@ function Page() {
     return (
         <div className='p-2 md:p-3'>
             {projects?.status ? (
-
                 <div className="container mx-auto text-white md:px-5">
                     <div className="relative  sm:w-full mx-auto">
                         <h1 className='absolute top-6 left-8 md:top-8 md:left-12 xl:top-7 xl:left-14 text-xl md:text-3xl xl:text-[60px] uppercase font-semibold xl:font-medium'>{service.data.name}</h1>

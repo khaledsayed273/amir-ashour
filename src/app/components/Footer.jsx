@@ -43,7 +43,7 @@ async function Footer({setting}) {
                         <div className='container flex items-center justify-center mx-auto h-full'>
                             {ul.map((item) => (
                                 item.name === "home" ? (
-                                    <Link aria-label="home" key={item.id} className='inline-block md:mx-7 mt-2 md:mt-0' href={`${item.href}`}>
+                                    <Link aria-label="home" key={item.id} className='inline-block md:mx-7 mt-8 md:mt-0' href={`${item.href}`}>
                                         <Logo />
                                     </Link>
                                 ) : (
@@ -55,7 +55,7 @@ async function Footer({setting}) {
                         </div>
                     </div>
 
-                    <div className="container mx-auto md:mt-20 mb-5 px-5 h-full mt-16">
+                    <div className="container mx-auto mt-10 md:mt-20 mb-5 px-5 h-full">
                         <div className=" flex flex-col-reverse md:flex-row justify-between items-center">
                             <p className='text-sm mt-16 md:mt-0'>© 2024 <Link target='_blank' className='text-orange-500 0 hover:opacity-80' href={"https://www.megatron-soft.com"}>Megatron</Link> company All rights reserved.</p>
 
