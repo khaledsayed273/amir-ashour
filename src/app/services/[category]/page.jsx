@@ -119,7 +119,6 @@ function Page() {
         setImg(item.image)
     }
 
-
     return (
         <div className='p-2 md:p-3'>
             {projects?.status ? (
