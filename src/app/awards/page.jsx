@@ -21,7 +21,6 @@ async function getAwards() {
 
 export const revalidate = +process.env.time;
 
-
 async function page() {
 
     const awards = await getAwards()
