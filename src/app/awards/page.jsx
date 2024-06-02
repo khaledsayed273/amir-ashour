@@ -27,7 +27,7 @@ async function page() {
     const awards = await getAwards()
 
     return (
-            <div className="container px-2 mx-auto text-white md:px-20">
+            <div className="container px-2 mx-auto text-white md:px-5 xl:px-20">
                 {awards?.status ? (
                     <>
                         <div className="grid md:grid-cols-2 gap-5 md:gap-20 xl:gap-52 2xl:gap-80 gap-y-10 my-16">
