@@ -1,5 +1,5 @@
 "use client"
-import API from '@/api/API'
+import API from '../../../api/API'
 import React, { useEffect, useState } from 'react'
 import { Toaster, toast } from 'sonner'
 

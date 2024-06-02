@@ -3,7 +3,7 @@ import FormComponent from './components/FormComponent'
 import Image from 'next/image'
 import backgroundImage from "../../../public/images/backgroundImage.jpeg"
 import Link from 'next/link'
-import API from '@/api/API'
+import API from '../../api/API'
 
 
 export const metadata = {

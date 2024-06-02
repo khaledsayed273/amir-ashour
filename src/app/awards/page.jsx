@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import End from '../components/End'
-import API from '@/api/API'
+import API from '../../api/API'
 import Loading from '../components/Loading'
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import API from '@/api/API'
+import API from '../../../api/API'
 import Image from 'next/image'
 
 async function getProjectDetails(details) {

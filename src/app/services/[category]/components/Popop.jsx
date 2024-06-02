@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import Image from 'next/image'
+import { Dialog, Transition } from '@headlessui/react'
 
 function Popop({img, isOpen, closeModal }) {
 
@@ -33,10 +33,7 @@ function Popop({img, isOpen, closeModal }) {
               leaveTo="opacity-0 scale-50"
             >
               <Dialog.Panel className="w-full h-[70vh] md:h-[70vh]  relative max-w-xl transform overflow-hidden rounded-2xl  p-6 shadow-xl transition-all">
-              
                 <Image style={{objectFit: "cover"}} sizes='100%' fill src={img} alt='img'/>
-
-                
               </Dialog.Panel>
             </Transition.Child>
           </div>
