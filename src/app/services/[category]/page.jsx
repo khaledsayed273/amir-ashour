@@ -98,7 +98,7 @@ function Page() {
     const cardStyle = (item) => {
         return (
             <>
-                <div className="relative w-full h-[400px]  xl:h-[450px]   overflow-hidden rounded-xl border border-gray-800">
+                <div className="relative w-full h-[400px] xl:h-[450px] overflow-hidden rounded-xl border border-gray-800">
                     <Image
                     
                         placeholder="blur"
@@ -142,13 +142,13 @@ function Page() {
                                 {projects.data.data.map((item) => (
                                     category === "book-cover" || category === "typography" ? (
                                         <div key={item.id} >
-                                            <div className='relative hover:scale-105 transition-all duration-500 cursor-pointer group' onClick={() => handleOpen(item)}>
+                                            <div className='relative hover:lg:scale-105 transition-all duration-500 cursor-pointer group' onClick={() => handleOpen(item)}>
                                                 {cardStyle(item)}
                                             </div>
 
                                         </div>
                                     ) : (
-                                        <Link className='hover:scale-105 transition-all duration-500 relative group' key={item.id} href={`/project/${item.slug}`}>
+                                        <Link className='hover:lg:scale-105 transition-all duration-500 relative group' key={item.id} href={`/project/${item.slug}`}>
                                             {cardStyle(item)}
                                         </Link>
                                     )
@@ -174,7 +174,6 @@ function Page() {
                         )}
                         {limit < projects?.data.meta.total && (
                             <button onClick={handleLimit} className='inline-block mt-7 hover:opacity-70 bg-yellow-800 capitalize px-12 py-1.5 rounded-full'>more</button>
-
                         )}
                     </div>
 
