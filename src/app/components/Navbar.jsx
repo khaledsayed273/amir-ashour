@@ -62,7 +62,7 @@ function Navbar() {
           </ul>
         </div>
 
-        <button aria-label="toggle" onClick={() => setOpen(!open)} className='text-neutral-100 md:hidden '>
+        <button aria-label="toggle" onClick={() => setOpen(!open)} className='text-neutral-100 md:hidden border rounded-sm p-1'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 ">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
