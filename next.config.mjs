@@ -8,6 +8,12 @@ const nextConfig = {
                 port: "",
                 pathname: "/**",
             },
+            {
+                protocol: "https",
+                hostname: "dashboard.amir-ashour.com",
+                port: "",
+                pathname: "/**",
+            },
         ],
         unoptimized: false
     },

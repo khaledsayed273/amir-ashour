@@ -20,7 +20,7 @@ function FormComponent() {
     const HandleSend = async (e) => {
         e.preventDefault()
         try {
-            const req = await API.post(`https://amir.vintage-artgallery.com/api/v1/contact`, { user_name, email, phone, message }, {
+            const req = await API.post(`https://dashboard.amir-ashour.com/api/v1/contact`, { user_name, email, phone, message }, {
             })
             toast.success(req?.data?.message)
             setFirstName("")

@@ -14,7 +14,7 @@ function SwiperHome() {
 
     const getLatestProjects = async () => {
         try {
-            const res = await axios.get(`https://amir.mixtesting.online/api/v1/projects/latest/project`)
+            const res = await axios.get(`https://dashboard.amir-ashour.com/api/v1/projects/latest/project`)
             return setLatestProjects(res.data)
         } catch (e) {
             console.log(e);

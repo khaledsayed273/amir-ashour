@@ -48,7 +48,7 @@ function Page() {
     const getOneService = async () => {
         setShowLoading(true)
         try {
-            const res = await axios.get(`https://amir.mixtesting.online/api/v1/services/${category}`)
+            const res = await axios.get(`https://dashboard.amir-ashour.com/api/v1/services/${category}`)
             setShowLoading(false)
             return setService(res.data)
         } catch (e) {
@@ -61,7 +61,7 @@ function Page() {
         setShowLoading(true)
         try {
 
-            const res = await axios.get(`https://amir.mixtesting.online/api/v1/projects?limit=${newLimit ? newLimit : limit}&service_id=${service?.data.id}`)
+            const res = await axios.get(`https://dashboard.amir-ashour.com/api/v1/projects?limit=${newLimit ? newLimit : limit}&service_id=${service?.data.id}`)
             return setProjects(res.data)
         } catch (e) {
             console.log(e);
